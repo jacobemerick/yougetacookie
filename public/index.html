@@ -59,7 +59,7 @@
         document.getElementById('cookie-yes').style.display = 'none';
         document.getElementById('cookie-no').style.display = 'block';
       } else {
-        var cookieFlavor = cookieChoices[Math.floor(Math.random() * cookieChoices.length)]
+        var cookieFlavor = cookieChoices[Math.floor(Math.random() * cookieChoices.length)];
         Cookies.set('hascookie', cookieFlavor, { expires: 1 });
       }
     })();

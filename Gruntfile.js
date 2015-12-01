@@ -23,7 +23,7 @@ module.exports = function(grunt) {
     uglify: {
       scripts: {
         files: {
-          'web/scripts/vendor/js.cookie.min.js': 'build/temp/js.cookie.js'
+          'public/scripts/vendor/js.cookie.min.js': 'build/temp/js.cookie.js'
         }
       }
     }
