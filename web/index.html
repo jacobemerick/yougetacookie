@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>Want a Cookie?</title>
+  <meta name="description" content="A page for anyone out there who deserves a cookie." />
+  <meta name="keywords" content="cookie, deserve, Jacob Emerick" />
+  <link href="/favicon.ico" rel="shortcut icon" />
+  <link href="/styles/cookie-style.css" type="text/css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Molengo|Yellowtail" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="main">
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="content" id="cookie-no" style="display:none;">
+      <div class="heading">
+        <h2>No cookie for you!</h2>
+        <h1>You'll spoil your</h1>
+      </div>
+      <div class="holder mean-cook"></div>
+      <div class="fancy">
+        <h2>dinner</h2>
+      </div>
+    </div>
+    <div class="content" id="cookie-yes">
+      <div class="heading">
+        <h2>You're Special!</h2>
+        <h1>You get a</h1>
+      </div>
+      <div class="holder have-a-cookie"></div>
+      <div class="fancy">
+        <h2>Cookie</h2>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="scripts/vendor/js.cookie.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      var cookieChoices = [
+        'Gooey Chocolate Chip',
+        'Snickerdoodle (Like, the Best Cookie Evar)',
+        'Semi-Healthy Oatmeal',
+        'Thin Mint',
+        'Sugar Cookie',
+        'White Macadamia Nut',
+        'M&M Cookie',
+        'Peanut Butter'
+      ];
+
+      if (
+        Cookies.get('hascookie') !== undefined &&
+        cookieChoices.indexOf(Cookies.get('hascookie')) >= -1
+      ) {
+        document.getElementById('cookie-yes').style.display = 'none';
+        document.getElementById('cookie-no').style.display = 'block';
+      } else {
+        var cookieFlavor = cookieChoices[Math.floor(Math.random() * cookieChoices.length)]
+        Cookies.set('hascookie', cookieFlavor, { expires: 1 });
+      }
+    })();
+  </script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-39579042-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+</body>
+
+</html>

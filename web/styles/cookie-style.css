@@ -1,0 +1,76 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, img, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;}
+body {
+	line-height: 1;}
+
+html, body {
+	height: 100%;}
+body {
+	background: #69ae2f url('/images/bg.jpg') repeat;
+	font: 60px Molengo, sans-serif;
+	position: relative;
+	z-index: 1;}
+.wrap {
+	min-height: 100%;}
+.main {
+	overflow: auto;
+	padding-bottom: 300px;}
+.bottom {
+	background-color: #fff3dd;
+	border-top: 6px solid #7d4a09;
+	clear: both;
+	height: 288px;
+	margin-top: -294px;
+	position: relative;}
+.content {
+	margin-top: -250px;
+	text-align: center;
+	width: 100%;}
+.heading {
+	color: #fff3dd;
+	text-transform: uppercase;}
+.holder {
+	background: no-repeat;
+	display: block;
+	height: 200px;
+	margin: 0 auto;
+	width: 200px;}
+.holder.have-a-cookie {
+	background-image: url('/images/cookie.png');}
+.holder.mean-cook {
+	background-image: url('/images/cookie-nazi.png');}
+.fancy {
+	color: #7d4a09;
+	font: 120px Yellowtail, cursive;
+	margin: -20px 0 20px;
+	text-transform: lowercase;}
+
+body:before {
+	content: '';
+	float: left;
+	height: 100%;
+	margin-top: -32767px;
+	width: 0;}
+
+@media all and (max-width: 600px) {
+  body {
+    font-size: 42px;
+    line-height: 60px;}
+  .fancy {
+    font-size: 90px;}
+}
+
+@media all and (max-width: 400px) {
+  .content {
+    margin-top: -300px;}
+  .fancy {
+    font-size: 60px;}
+}

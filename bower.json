@@ -1,0 +1,14 @@
+{
+  "name": "yougetacookie",
+  "authors": [
+    "Jacob Emerick <jpemeric@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "http://yougetacookie.com/",
+  "ignore": [
+    "bower_components"
+  ],
+  "dependencies": {
+    "js-cookie": "~2.0.4"
+  }
+}
