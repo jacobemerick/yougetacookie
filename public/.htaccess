@@ -1,0 +1,13 @@
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault A0
+
+  <FilesMatch "\.(css|ico|jpg|js|png)$">
+  ExpiresDefault A604800
+  </FilesMatch>
+</IfModule>
+
+RewriteEngine on
+
+RewriteCond %{HTTPS} off
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URL} [L,R=301]
