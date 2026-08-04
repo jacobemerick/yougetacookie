@@ -12,7 +12,8 @@ A flat site: one html file, one stylesheet, a few images.
 npm install
 npm run dev
 ```
-Then open <http://localhost:8787>. This runs the actual Cloudflare Workers runtime locally, so `_headers` (caching, CSP, etc.) apply exactly as they do in production.
+Then open <http://localhost:8787>.
+This runs the actual Cloudflare Workers runtime locally, so `_headers` (caching, CSP, etc.) apply exactly as they do in production.
 
 To see the "no cookie" state, delete the `hascookie` cookie using dev tools (Application -> Cookies) and reload.
 Or just wait a day, the cookie expires in 24h.
