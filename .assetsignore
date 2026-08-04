@@ -1,7 +1,18 @@
+# Controls what Cloudflare Workers serves as public static assets.
+# This is a separate mechanism from .gitignore -- it does not read or
+# inherit from it, so untracked/gitignored files still get served
+# unless they're also listed here.
+
+# Dependencies & local tooling state
 node_modules
 .wrangler
 .git
+.claude
+.DS_Store
+
+# Repo metadata -- not site content, shouldn't be publicly fetchable
 .gitignore
+.assetsignore
 README.md
 LICENSE
 package.json

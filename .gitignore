@@ -1,2 +1,7 @@
-.wrangler/
+# Dependencies & local tooling state
 node_modules/
+.wrangler/
+
+# OS / editor cruft
+.DS_Store
+.claude/settings.local.json
