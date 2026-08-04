@@ -1,3 +1,21 @@
+/* --- fonts --- */
+
+@font-face {
+  font-family: 'Molengo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/molengo.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Yellowtail';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/yellowtail.woff2') format('woff2');
+}
+
 /* --- reset --- */
 
 body, div, h1, h2 {
