@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Want a Cookie?</title>
+  <meta name="description" content="A page for anyone out there who deserves a cookie." />
+  <link href="/favicon.ico" rel="icon" />
+  <link href="/styles/cookie-style.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Molengo|Yellowtail" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="bottom">
+    <div class="content" id="cookie-no" hidden>
+      <div class="heading">
+        <h2>No cookie for you!</h2>
+        <h1>You'll spoil your</h1>
+      </div>
+      <div class="holder mean-cook"></div>
+      <div class="fancy">
+        <h2>dinner</h2>
+      </div>
+    </div>
+    <div class="content" id="cookie-yes">
+      <div class="heading">
+        <h2>You're Special!</h2>
+        <h1>You get a</h1>
+      </div>
+      <div class="holder have-a-cookie"></div>
+      <div class="fancy">
+        <h2>Cookie</h2>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function() {
+      var flavors = [
+        'Gooey Chocolate Chip',
+        'Snickerdoodle (Like, the Best Cookie Evar)',
+        'Semi-Healthy Oatmeal',
+        'Thin Mint',
+        'Sugar Cookie',
+        'White Macadamia Nut',
+        'M&M Cookie',
+        'Peanut Butter'
+      ];
+
+      var match = document.cookie.match(/(?:^|;\s*)hascookie=([^;]*)/);
+      var flavor = match ? decodeURIComponent(match[1]) : null;
+
+      if (flavor !== null && flavors.indexOf(flavor) > -1) {
+        document.getElementById('cookie-yes').hidden = true;
+        document.getElementById('cookie-no').hidden = false;
+      } else {
+        flavor = flavors[Math.floor(Math.random() * flavors.length)];
+        document.cookie = 'hascookie=' + encodeURIComponent(flavor) + 
+          '; path=/; max-age=86400; samesite=lax';
+      }
+    })();
+  </script>
+</body>
+
+</html>

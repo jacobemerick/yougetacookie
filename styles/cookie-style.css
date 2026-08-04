@@ -1,0 +1,105 @@
+/* --- reset --- */
+
+body, div, h1, h2 {
+  border: 0;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- sizing --- */
+:root {
+  --heading: 60px;
+  --script: 120px;
+  --cookie: 200px;
+  --band: 288px;
+  --rise: 250px;
+}
+
+/* --- layout --- */
+body {
+  background: #69ae2f url('/images/bg.jpg') repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font: var(--heading)/1 Molengo, sans-serif;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.bottom {
+  background-color: #fff3dd;
+  border-top: 6px solid #7d4a09;
+  min-height: var(--band);
+}
+
+.content {
+  margin-top: calc(var(--rise) * -1);
+  text-align: center;
+}
+
+.heading {
+  color: #fff3dd;
+  text-transform: uppercase;}
+
+.holder {
+  background: no-repeat center / contain;
+  height: var(--cookie);
+  margin: 0 auto;
+  width: var(--cookie);}
+
+.holder.have-a-cookie {
+  background-image: url('/images/cookie.png');
+}
+
+.holder.mean-cook {
+  background-image: url('/images/cook.png');
+}
+
+.fancy {
+  color: #7d4a09;
+  font: var(--script)/1 Yellowtail, cursive;
+  margin: calc(var(--script) / -6) 0 20px;
+  text-transform: lowercase;
+}
+
+/* --- other sizes --- */
+@media (max-width: 600px) {
+  :root {
+    --heading: 42px;
+    --script: 90px;
+    --cookie: 180px;
+    --band: 230px;
+    --rise: 201px;
+  }
+}
+
+@media (max-width: 400px) {
+  :root {
+    --heading: 32px;
+    --script: 66px;
+    --cookie: 140px;
+    --band: 180px;
+    --rise: 155px;
+  }
+}
+
+@media (max-height: 600px) {
+  :root {
+    --heading: 32px;
+    --script: 66px;
+    --cookie: 130px;
+    --band: 170px;
+    --rise: 149px;
+  }
+}
+
+@media (max-height: 380px) {
+  :root {
+    --heading: 24px;
+    --script: 50px;
+    --cookie: 100px;
+    --band: 130px;
+    --rise: 113px;
+  }
+}
