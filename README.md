@@ -19,8 +19,8 @@ Or just wait a day, the cookie expires in 24h.
 
 ## Deploying
 
-Cloudflare Pages is wired to this repo's `main` branch.
-Build command is empty, output directory is the repo's root.
+Cloudflare Workers (git-integrated "Workers Builds") is wired to this repo's `main` branch.
+Deploy command is `npx wrangler versions upload`; `wrangler.jsonc` points it at the repo root as a static assets directory, no Worker script needed.
 Other branches get their own preview url automatically.
 
-`_headers` carries the caching rules.
+`_headers` carries the caching and security header rules.
