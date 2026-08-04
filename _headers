@@ -1,0 +1,14 @@
+# Pages serves HTML as must-revalidate by default.
+
+/images/*
+  Cache-Control: public, max-age=604800
+
+/styles/*
+  Cache-Control: public, max-age=604800
+
+/favicon.ico
+  Cache-Control: public, max-age=604800
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
