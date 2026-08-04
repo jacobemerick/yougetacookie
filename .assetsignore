@@ -1,7 +1,10 @@
 node_modules
 .wrangler
 .git
+.claude
+.DS_Store
 .gitignore
+.assetsignore
 README.md
 LICENSE
 package.json
